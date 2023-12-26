@@ -1,0 +1,9 @@
+.add-modal-title,
+.add-modal-toolbar {
+  --ion-background-color: #1a2a3c;
+  --ion-background-color: linear-gradient(
+    135deg,
+    rgba(76, 137, 255, 1) 0%,
+    rgb(23, 32, 43) 100%
+  );
+}

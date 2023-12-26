@@ -1,0 +1,10 @@
+<ion-fab
+  [slot]="slot"
+  [vertical]="vertical"
+  [horizontal]="horizontal"
+  [ngStyle]="customStyles || {}"
+>
+  <ion-fab-button [size]="size" (click)="handleClick()">
+    <ion-icon [name]="iconName"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

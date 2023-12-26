@@ -1,0 +1,19 @@
+<header>
+  <div class="title">
+    <h1>{{ title }}</h1>
+  </div>
+  <div *ngIf="allowDisplayChange" class="btn-slot">
+    <app-fab-button
+      [size]="size"
+      [iconName]="
+        displayCards ? 'swap-horizontal-outline' : 'swap-vertical-outline'
+      "
+      [slot]="slot"
+      [horizontal]="horizontal"
+      [vertical]="vertical"
+      [customStyles]="addStyles || {}"
+      (displayTypeChange$)="handleFabButtonClick()"
+    >
+    </app-fab-button>
+  </div>
+</header>

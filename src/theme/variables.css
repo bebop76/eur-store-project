@@ -1,0 +1,22 @@
+/* Ionic Variables and Theming. */
+/* This is just a placeholder file For more info, please see: */
+/* https://ionicframework.com/docs/theming/basics */
+
+/* To quickly generate your own theme, check out the color generator */
+/* https://ionicframework.com/docs/theming/color-generator */
+@font-face {
+    font-family: AppFont;
+    src: url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"); 
+    }
+    :root {
+        --ion-font-family: 'AppFont';
+        }
+body{
+    --ion-background-color: #17202b;
+    --ion-text-color: #eeeeee;
+}
+.custom-toast {
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 10px;
+  }

@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+}
+.photo-slot {
+  width: 75%;
+  margin: 0 auto;
+}
+.photo {
+  width: 100%;
+}
+.btn {
+  width: 75%;
+  margin: 0 auto;
+}
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.info h1 {
+  color: rgba(76, 137, 255, 1);
+}
+.custom-line-color {
+  border-bottom: 2px solid #1a2a3c;
+}
+.empl-chip {
+  color: #ffffff;
+}
+.empl-container {
+  padding: 8px 0;
+}

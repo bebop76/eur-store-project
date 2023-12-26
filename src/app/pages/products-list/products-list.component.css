@@ -1,0 +1,39 @@
+.cards-container {
+  width: 100%;
+  text-align: center;
+}
+.card {
+  padding: 8px;
+  background-color: #1a2a3c;
+  transition: all 0.3s;
+  box-shadow: 2px 2px #69afdc;
+}
+.card:hover {
+  scale: 0.9;
+  box-shadow: none;
+}
+.cards-container img {
+  color: red;
+  height: 150px;
+}
+.cards-container ion-card-title {
+  color: #eeeeee;
+}
+.card-container:hover {
+  cursor: pointer;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.card-container {
+  margin-right: 10px;
+}
+.item-row {
+  cursor: pointer;
+}
+img {
+  border: 2px solid #17202b;
+}

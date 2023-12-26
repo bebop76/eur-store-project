@@ -1,0 +1,58 @@
+<app-header-title
+  title="{{ headerTitle }}"
+  [allowDisplayChange]="true"
+  (displayTypeChange$)="handleDisplayTypeChange()"
+></app-header-title>
+<ion-content class="cards-container">
+  <ng-container *ngIf="displayCards === 'cards'; else listTemplate">
+    <div class="flex-container">
+      <ng-container *ngFor="let product of storeProducts; trackBy: trackStore">
+        <div class="card-container" (click)="enterProduct(product.id)">
+          <ion-card class="card">
+            <img
+              alt="{{ product.data.description }}"
+              src="assets/images/dolce.png"
+            />
+            <ion-card-header>
+              <ion-card-title>{{ product.data.title }}</ion-card-title>
+              <ion-card-subtitle
+                >Price:
+                {{ product.data.price | number : "1.2-2" }} €</ion-card-subtitle
+              >
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+  <ng-template #listTemplate>
+    <ion-list lines="full" [inset]="true" color="primary">
+      <ng-container *ngFor="let product of storeProducts; trackBy: trackStore">
+        <ion-item class="item-row" (click)="enterProduct(product.id)">
+          <img
+            slot="start"
+            style="width: 50px; height: 50px"
+            alt="{{ product.data.description }}"
+            src="assets/images/dolce.png"
+          />
+          <ion-label>{{ product.data.title }}</ion-label>
+          <ion-label slot="end"
+            >Price: {{ product.data.price | number : "1.2-2" }} €</ion-label
+          >
+        </ion-item>
+      </ng-container>
+    </ion-list>
+  </ng-template>
+</ion-content>
+<audio id="mySound">
+  <!-- <source src="assets/sounds/loading_data.mp3" type="audio/mpeg"> -->
+</audio>
+
+<app-fab-button
+  [iconName]="'add'"
+  [slot]="slot"
+  [horizontal]="horizontal"
+  [vertical]="vertical"
+  [customStyles]="addStyles || {}"
+  (buttonClick)="handleFabButtonClick()"
+></app-fab-button>

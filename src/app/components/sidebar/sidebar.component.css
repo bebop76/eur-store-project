@@ -1,0 +1,12 @@
+#menu {
+  padding: 2rem;
+}
+#menu li {
+  padding: 0.2rem;
+  font-size: 24px;
+  list-style-type: square;
+}
+#menu li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

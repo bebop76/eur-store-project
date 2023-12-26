@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 132px;
+  width: 100%;
+  padding: 10px;
+  animation: animation 0.3s ease-in-out;
+}
+.title {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.btn-slot {
+  margin-left: 10px;
+}
+@keyframes animation {
+  from {
+    width: 1%;
+  }
+  to {
+    width: 100%;
+  }
+}

@@ -1,0 +1,53 @@
+<ion-header class="add-modal-toolbar">
+  <ion-toolbar>
+    <ion-title class="add-modal-title"> Add new product </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Title</ion-label>
+        <ion-input formControlName="title" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-textarea formControlName="description" required></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Category</ion-label>
+        <ion-input formControlName="category" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Price</ion-label>
+        <ion-input type="number" formControlName="price" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Employee</ion-label>
+        <ion-input type="text" formControlName="employee" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Review</ion-label>
+        <ion-textarea formControlName="review"></ion-textarea>
+      </ion-item>
+    </ion-list>
+  </form>
+  <ion-button
+    (click)="createProduct()"
+    [disabled]="form.invalid"
+    expand="full"
+    size="default"
+    >CREATE</ion-button
+  >
+</ion-content>
