@@ -15,9 +15,9 @@ export class ApiCallsService {
   public products$: Observable<ProductsEntity[]> =
     this.productsSubject.asObservable();
 
-  private idStore: string = 'ijpxNJLM732vm8AeajMR';
+  private idStore: string = '';
   private apiUrl: string =
-    'http://us-central1-test-b7665.cloudfunctions.net/api';
+    '';
 
   constructor(private http: HttpClient) {}
 
